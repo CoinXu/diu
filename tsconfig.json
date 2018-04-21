@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "outDir": "../dist",
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@diu/*": [
+        "./*"
+      ],
+    },
+    "rootDir": ".",
+    "inlineSourceMap": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "target": "es5",
+    "pretty": true,
+    "types": [
+      "node"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "__test__",
+    "tmp"
+  ]
+}

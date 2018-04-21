@@ -1,0 +1,18 @@
+{
+  "author": {
+    "name": "coinxu",
+    "email": "duanxian0605@gmail.com",
+    "url": "https://github.com/CoinXu"
+  },
+  "name": "diu",
+  "description": "node server framework",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@types/node": "9.6.6",
+    "typescript": "2.8"
+  },
+  "repository": {
+    "url": "https://github.com/CoinXu/diu"
+  },
+  "license": "MIT"
+}
