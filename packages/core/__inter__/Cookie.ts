@@ -28,4 +28,5 @@ export interface Cookie {
   setVersion(version: number): Cookie
 
   toString(): string
+  serilaize(): string
 }
