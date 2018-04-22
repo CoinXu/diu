@@ -31,4 +31,6 @@ export interface HttpRequest {
   getCookie(name: string): Cookie | null
   getCookies(): Cookie[]
   getCookieNames(): string
+
+  getSession(): void
 }
