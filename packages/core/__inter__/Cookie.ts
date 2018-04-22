@@ -5,6 +5,7 @@
  */
 
 export interface Cookie {
+  new(name: string, value: string): Cookie
   getComment(): string
   getDomain(): string
   getMaxAge(): number
@@ -24,4 +25,6 @@ export interface Cookie {
   setSecure(flag: boolean): Cookie
   setValue(value: string): Cookie
   setVersion(version: number): Cookie
+
+  toString(): string
 }
