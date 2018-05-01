@@ -4,10 +4,21 @@
  * @description
  */
 
+export interface DiuFilterConfig {
+  // absolute path
+  path: string
+  // default value: default
+  name?: string
+  parameter: { [key: string]: any }
+}
+
 export interface DiuConfig {
   env: "production" | "development"
   server: {
     port: number
     host: string
+  },
+  application: {
+    filter: DiuFilterConfig[]
   }
 }

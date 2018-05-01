@@ -16,7 +16,7 @@ export interface Cookie {
   getValue(): string
   getVersion(): number
 
-  isHttpOnly(): string
+  isHttpOnly(): boolean
 
   setComment(purpose: string): Cookie
   setDomain(patter: string): Cookie
@@ -28,5 +28,5 @@ export interface Cookie {
   setVersion(version: number): Cookie
 
   toString(): string
-  serilaize(): string
+  serialize(): string
 }

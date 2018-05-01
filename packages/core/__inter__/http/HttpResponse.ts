@@ -28,7 +28,7 @@ export interface HttpResponse {
   addHeader(name: string, value: Header): HttpResponse
   setHeader(name: string, value: Header): HttpResponse
   addCookie(cookie: Cookie): HttpResponse
-  redirect(localtion: string): HttpResponse
+  redirect(location: string): HttpResponse
   getStatus(): number
   setStatus(status: number): HttpResponse
 }
