@@ -5,11 +5,11 @@
  */
 
 import { Filter } from "./Filter"
-import { DiuContext } from "./DiuContext"
+import { Context } from "./Context"
 
-export interface FilterManage {
-  new(context: DiuContext, filters?: Filter[]): FilterManage
-  add(filter: Filter): FilterManage
-  next(): Promise<FilterManage>
+export interface FilterManager {
+  new(context: Context, filters?: Filter[]): FilterManager
+  add(filter: Filter): FilterManager
+  next(): Promise<FilterManager>
   hasNext() :boolean
 }

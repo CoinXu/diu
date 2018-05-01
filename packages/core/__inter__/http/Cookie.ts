@@ -6,13 +6,12 @@
  */
 
 export interface Cookie {
-  new(name: string, value: string): Cookie
   getComment(): string
   getDomain(): string
   getMaxAge(): number
   getName(): string
-  getPah(): string
-  getSecure(): string
+  getPath(): string
+  getSecure(): boolean
   getValue(): string
   getVersion(): number
 
@@ -20,13 +19,12 @@ export interface Cookie {
 
   setComment(purpose: string): Cookie
   setDomain(patter: string): Cookie
-  setHttpOnly(httpOnly: boolean): Cookie
   setMaxAge(expire: number): Cookie
+  setHttpOnly(httpOnly: boolean): Cookie
   setPath(uri: string): Cookie
   setSecure(flag: boolean): Cookie
   setValue(value: string): Cookie
   setVersion(version: number): Cookie
 
   toString(): string
-  serialize(): string
 }
