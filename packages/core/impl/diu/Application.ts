@@ -17,6 +17,7 @@ export class Application implements IApplication {
 
   public constructor(server?: Server) {
     this.server = server || createServer()
+    this.filters = []
   }
 
   private lisenter(): (req: IncomingMessage, res: ServerResponse) => void {

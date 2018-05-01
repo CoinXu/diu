@@ -4,16 +4,16 @@
  * @description FilterManager
  */
 
-import { FilterManage as IFilterManager } from "../../__inter__/diu/FilterManage"
+import { FilterManager as IFilterManager } from "../../__inter__/diu/FilterManage"
 import { Filter } from "../../__inter__/diu/Filter"
-import { DiuContext } from "../../__inter__/diu/DiuContext"
+import { Context } from "../../__inter__/diu/Context"
 
-export class FilterManager implements IFilterManager {
+export class FilterManager implements FilterManager {
   private filters: Filter[]
   private point: number
-  private context: DiuContext
+  private context: Context
 
-  public constructor(context: DiuContext, filters?: Filter[]) {
+  public constructor(context: Context, filters?: Filter[]) {
     this.context = context
     this.filters = filters || []
     this.point = 0
