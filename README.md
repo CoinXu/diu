@@ -1,8 +1,6 @@
-
-
 # Diu
 Diu is a framework to build server application using Typescript/JavaScript.
-proovide frequently-used functions such as session, cookie, request body parser etc.
+provide frequently-used functions such as session, cookie, request body parser etc.
 
 # Architecture
 ```
