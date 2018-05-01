@@ -5,10 +5,8 @@
  */
 
 import { Cookie } from "./Cookie"
-import { IncomingMessage } from "http"
 
 export interface HttpRequest {
-  new(request: IncomingMessage): HttpRequest
   getAttribute(name: string): string
   getAttributeNames(): string[]
 
