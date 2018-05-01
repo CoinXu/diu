@@ -7,7 +7,6 @@
 import { Filter } from "./Filter"
 
 export interface Application {
-  new(): Application
   add(filter: Filter): Application
   listen(port: number, host?: string): Application
 }

@@ -9,6 +9,5 @@ import { Filter } from "./Filter"
 export interface FilterManager {
   add(filter: Filter): FilterManager
   next(): Promise<FilterManager>
-  apply(): Promise<FilterManager>
   hasNext(): boolean
 }

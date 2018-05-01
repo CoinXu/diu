@@ -8,28 +8,21 @@ import { Application as IApplication } from "../../__inter__/diu/Application"
 import { FilterManager } from "./FilterManager"
 import { Filter } from "../../__inter__/diu/Filter"
 import { Context } from "../../__inter__/diu/Context"
+import { DiuConfig } from "../../__inter__/DiuConfig"
 import { createServer, Server, IncomingMessage, ServerResponse } from "http"
 import { createContext } from "./Context"
+import { HttpStatus } from "../http/HttpStatus"
 
 export class Application implements IApplication {
 
-  private server: Server
+  private config: DiuConfig
   private filters: Filter[]
+  private server: Server
 
-  public constructor(server?: Server) {
-    this.server = server || createServer()
+  public constructor(config: DiuConfig, server?: Server) {
+    this.config = config
     this.filters = []
-  }
-
-  private lisenter(): (req: IncomingMessage, res: ServerResponse) => void {
-    return (req: IncomingMessage, res: ServerResponse): void => {
-      const context: Context = createContext(req, res)
-      const manager: FilterManager = new FilterManager(context, this.filters)
-      manager.apply().catch(error => {
-        context.response.setStatus(500)
-        context.response.getOutputStream().write(error.message)
-      })
-    }
+    this.server = server || createServer()
   }
 
   public add(filter: Filter): Application {
@@ -37,7 +30,15 @@ export class Application implements IApplication {
     return this
   }
 
-  public listen(port: number, host: string) {
-    this.server.listen(port, host)
+  public listen(port: number, host = "0.0.0.0"): Application {
+    this.server.listen(port, host, (req: IncomingMessage, res: ServerResponse): void => {
+      const context: Context = createContext(req, res)
+      const manager: FilterManager = new FilterManager(context, this.filters)
+      manager.next().catch(error => {
+        context.response.setStatus(HttpStatus.INTERNAL_SERVERERROR.code)
+        context.response.getOutputStream().write(error.message)
+      })
+    })
+    return this
   }
 }

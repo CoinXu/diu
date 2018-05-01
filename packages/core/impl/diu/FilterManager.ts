@@ -25,21 +25,17 @@ export class FilterManager implements IFilterManager {
   }
 
   public async next(): Promise<FilterManager> {
-    if (this.filters[this.point]) {
-      await this.filters[this.point].action(this.context.request, this.context.response)
+    if (!this.hasNext()) {
+      return this
     }
+
+    await this.filters[this.point].action(this.context.request, this.context.response)
     this.point = this.point + 1
+
     return this
   }
 
   public hasNext(): boolean {
     return this.point < this.filters.length
-  }
-
-  public async apply(): Promise<FilterManager> {
-    while (this.hasNext()) {
-      await this.next()
-    }
-    return this
   }
 }
