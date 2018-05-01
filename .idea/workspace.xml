@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fa28a3b-3204-455f-8fea-f25c24501e73" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/core/__inter__/ServerConfig.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/core/src/config.ts" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/core/__inter__/Cookie.ts" afterPath="$PROJECT_DIR$/packages/core/__inter__/http/Cookie.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/core/__inter__/Header.ts" afterPath="$PROJECT_DIR$/packages/core/__inter__/http/Header.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/core/__inter__/HttpRequest.ts" afterPath="$PROJECT_DIR$/packages/core/__inter__/http/HttpRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/core/__inter__/HttpResponse.ts" afterPath="$PROJECT_DIR$/packages/core/__inter__/http/HttpResponse.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/core/__inter__/HttpSession.ts" afterPath="$PROJECT_DIR$/packages/core/__inter__/http/HttpSession.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/core/__inter__/Service.ts" afterPath="$PROJECT_DIR$/packages/core/__inter__/diu/Service.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/core/__inter__/ServiceConfig.ts" afterPath="$PROJECT_DIR$/packages/core/__inter__/diu/ServiceConfig.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="$PROJECT_DIR$/tsconfig.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/core/__inter__/Filter.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/core/__inter__/verbose/ClassInstance.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/core/__inter__/verbose/ClassLoader.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/core/__inter__/verbose/SingletonClassInstance.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/core/src/DiuConfig.ts" afterPath="$PROJECT_DIR$/packages/core/impl/DiuConfig.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/core/__inter__/http/Cookie.ts" afterPath="$PROJECT_DIR$/packages/core/__inter__/http/Cookie.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,11 +37,23 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ServiceConfig.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/packages/core/__inter__/diu/ServiceConfig.ts">
+          <file leaf-file-name="DiuConfig.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/core/impl/DiuConfig.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+                <state relative-caret-position="340">
+                  <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -102,6 +112,11 @@
         <option value="$PROJECT_DIR$/packages/core/__inter__/ServiceConfig.ts" />
         <option value="$PROJECT_DIR$/packages/core/__inter__/diu/Service.ts" />
         <option value="$PROJECT_DIR$/packages/core/__inter__/http/Cookie.ts" />
+        <option value="$PROJECT_DIR$/packages/core/__inter__/tools/ClassLoader.ts" />
+        <option value="$PROJECT_DIR$/packages/core/__inter__/verbose/SingletonClassInstance.ts" />
+        <option value="$PROJECT_DIR$/packages/core/__inter__/verbose/ClassInstance.ts" />
+        <option value="$PROJECT_DIR$/packages/core/__inter__/verbose/ClassLoader.ts" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -144,52 +159,6 @@
             <path>
               <item name="diu" type="b2602c69:ProjectViewProjectNode" />
               <item name="diu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diu" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diu" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diu" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="__inter__" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diu" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="__inter__" type="462c0819:PsiDirectoryNode" />
-              <item name="diu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diu" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="__inter__" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diu" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diu" type="462c0819:PsiDirectoryNode" />
-              <item name="tmp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -237,12 +206,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525133852737</updated>
       <workItem from="1525133855629" duration="1772000" />
-      <workItem from="1525135937037" duration="513000" />
+      <workItem from="1525135937037" duration="1123000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2285000" />
+    <option name="totallyTimeSpent" value="2895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-202" y="-1088" width="1936" height="1066" extended-state="6" />
@@ -299,7 +268,7 @@
         <state relative-caret-position="120">
           <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -312,38 +281,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/core/src/DiuConfig.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/core/__inter__/diu/Service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#96#145#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/core/__inter__/diu/Filter.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/core/__inter__/diu/ServiceConfig.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -379,6 +320,85 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/core/src/Cookie.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/core/src/Diu.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/core/__inter__/verbose/ClassInstance.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/core/__inter__/verbose/SingletonClassInstance.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/core/__inter__/verbose/ClassLoader.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#99#146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/core/__inter__/diu/ServiceConfig.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/core/__inter__/diu/Service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#96#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/core/impl/DiuConfig.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
