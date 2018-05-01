@@ -4,8 +4,8 @@
  * @description
  */
 
-export interface ServiceConfig {
+export interface FilterConfig {
   getInitParameter(name: string): string
   getInitParameterNames(): string[]
-  getServiceName(): string
+  getFilterName(): string
 }

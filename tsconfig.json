@@ -14,7 +14,7 @@
     "inlineSourceMap": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
-    "target": "es5",
+    "target": "es2017",
     "pretty": true,
     "types": [
       "node"

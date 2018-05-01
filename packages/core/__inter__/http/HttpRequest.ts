@@ -5,8 +5,10 @@
  */
 
 import { Cookie } from "./Cookie"
+import { IncomingMessage } from "http"
 
 export interface HttpRequest {
+  new(request: IncomingMessage): HttpRequest
   getAttribute(name: string): string
   getAttributeNames(): string[]
 
@@ -24,13 +26,13 @@ export interface HttpRequest {
   // request config
   getInputStream(): NodeJS.ReadableStream | null
   getParameter(): string
-  getParameterMap(): string
-  getParameterNames(): string
+  getParameterMap(): Map<string, string>
+  getParameterNames(): string[]
 
   // parser
   getCookie(name: string): Cookie | null
   getCookies(): Cookie[]
-  getCookieNames(): string
+  getCookieNames(): string[]
 
   getSession(): void
 }

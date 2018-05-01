@@ -6,7 +6,6 @@
  */
 
 export interface Cookie {
-  new(name: string, value: string): Cookie
   getComment(): string
   getDomain(): string
   getMaxAge(): number
