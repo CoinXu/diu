@@ -6,8 +6,10 @@
 
 import { Cookie } from "./Cookie"
 import { Header } from "./Header"
+import { ServerResponse } from "http"
 
 export interface HttpResponse {
+  getServerResponse(): ServerResponse
   getBufferSize(): number
   getCharacterEncoding(): string
   getContentType(): string

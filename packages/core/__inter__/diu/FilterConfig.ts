@@ -5,7 +5,6 @@
  */
 
 export interface FilterConfig {
-  getInitParameter(name: string): string
+  getInitParameter(name: string): any
   getInitParameterNames(): string[]
-  getFilterName(): string
 }

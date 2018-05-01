@@ -28,6 +28,10 @@ export class HttpResponse implements IHttpResponse {
     this.status = 200
   }
 
+  public getServerResponse(): ServerResponse {
+    return this.response
+  }
+
   public getBufferSize(): number {
     return 0
   }

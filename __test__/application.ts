@@ -5,7 +5,6 @@
  */
 
 import { Application } from "../packages/core/impl/diu/Application"
-import {} from "../packages/core/impl/diu/"
+import { Config } from "./Config"
 
-const app: Application = new Application()
-app.listen(8080)
+const app: Application = new Application(Config)

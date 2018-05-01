@@ -9,7 +9,7 @@ import { HttpResponse } from "../http/HttpResponse"
 import { FilterConfig } from "./FilterConfig"
 
 export interface Filter {
-  init(config: FilterConfig): Promise<Filter>
+  init(config: FilterConfig): Promise<boolean>
   action(req: HttpRequest, resp: HttpResponse): Promise<Filter>
   getName(): string
 }
