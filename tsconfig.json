@@ -8,13 +8,8 @@
     "moduleResolution": "node",
     "strict": true,
     "outDir": "../dist",
-    "noImplicitAny": true,
+    "strictNullChecks": true,
     "noFallthroughCasesInSwitch": true,
-    "paths": {
-      "@diu/*": [
-        "./*"
-      ],
-    },
     "rootDir": ".",
     "inlineSourceMap": true,
     "skipDefaultLibCheck": true,

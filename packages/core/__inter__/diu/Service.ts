@@ -5,8 +5,8 @@
  * @description Service
  */
 
-import { HttpRequest } from "./HttpRequest"
-import { HttpResponse } from "./HttpResponse"
+import { HttpRequest } from "../http/HttpRequest"
+import { HttpResponse } from "../http/HttpResponse"
 import { ServiceConfig } from "./ServiceConfig"
 
 export interface Service {

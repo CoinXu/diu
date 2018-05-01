@@ -18,7 +18,7 @@ export interface HttpRequest {
   getRemoteHost(): string
   getRemotePort(): string
   getRemoteIP(): string
-  getProtocal(): string
+  getProtocol(): string
   getHttpVersion(): string
 
   // request config

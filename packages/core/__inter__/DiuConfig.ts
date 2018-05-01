@@ -4,8 +4,8 @@
  * @description
  */
 
-export interface ServerConfig {
-  env: "production" | "devlopment"
+export interface DiuConfig {
+  env: "production" | "development"
   server: {
     port: number
     host: string
