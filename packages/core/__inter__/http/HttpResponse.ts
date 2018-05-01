@@ -25,7 +25,7 @@ export interface HttpResponse {
   getHeaders(): Header[]
   getHeaderNames(): string[]
   containsHeader(name: string): boolean
-  addHeder(name: string, value: Header): HttpResponse
+  addHeader(name: string, value: Header): HttpResponse
   setHeader(name: string, value: Header): HttpResponse
   addCookie(cookie: Cookie): HttpResponse
   redirect(localtion: string): HttpResponse

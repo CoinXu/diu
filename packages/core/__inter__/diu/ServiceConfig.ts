@@ -5,7 +5,7 @@
  */
 
 export interface ServiceConfig {
-  getInitParamter(name: string): string
-  getInitParamterNames(): string[]
+  getInitParameter(name: string): string
+  getInitParameterNames(): string[]
   getServiceName(): string
 }

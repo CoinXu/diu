@@ -11,22 +11,21 @@ export interface Cookie {
   getDomain(): string
   getMaxAge(): number
   getName(): string
-  getPah(): string
-  getSecure(): string
+  getPath(): string
+  getSecure(): boolean
   getValue(): string
   getVersion(): number
 
-  isHttpOnly(): string
+  isHttpOnly(): boolean
 
   setComment(purpose: string): Cookie
   setDomain(patter: string): Cookie
-  setHttpOnly(httpOnly: boolean): Cookie
   setMaxAge(expire: number): Cookie
+  setHttpOnly(httpOnly: boolean): Cookie
   setPath(uri: string): Cookie
   setSecure(flag: boolean): Cookie
   setValue(value: string): Cookie
   setVersion(version: number): Cookie
 
   toString(): string
-  serilaize(): string
 }
