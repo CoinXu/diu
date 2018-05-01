@@ -9,6 +9,7 @@ import { FilterManager } from "./FilterManager"
 import { Filter } from "../../__inter__/diu/Filter"
 import { Context } from "../../__inter__/diu/Context"
 import { createServer, Server, IncomingMessage, ServerResponse } from "http"
+import { createContext } from "./Context"
 
 export class Application implements IApplication {
 
@@ -21,10 +22,13 @@ export class Application implements IApplication {
   }
 
   private lisenter(): (req: IncomingMessage, res: ServerResponse) => void {
-    const context: Context = {}
-    const manager: FilterManager = new FilterManager()
-    return function (req: IncomingMessage, res: ServerResponse): void {
-
+    return (req: IncomingMessage, res: ServerResponse): void => {
+      const context: Context = createContext(req, res)
+      const manager: FilterManager = new FilterManager(context, this.filters)
+      manager.apply().catch(error => {
+        context.response.setStatus(500)
+        context.response.getOutputStream().write(error.message)
+      })
     }
   }
 

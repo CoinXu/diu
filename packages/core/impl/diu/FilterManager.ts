@@ -8,7 +8,7 @@ import { FilterManager as IFilterManager } from "../../__inter__/diu/FilterManag
 import { Filter } from "../../__inter__/diu/Filter"
 import { Context } from "../../__inter__/diu/Context"
 
-export class FilterManager implements FilterManager {
+export class FilterManager implements IFilterManager {
   private filters: Filter[]
   private point: number
   private context: Context
@@ -34,5 +34,12 @@ export class FilterManager implements FilterManager {
 
   public hasNext(): boolean {
     return this.point < this.filters.length
+  }
+
+  public async apply(): Promise<FilterManager> {
+    while (this.hasNext()) {
+      await this.next()
+    }
+    return this
   }
 }

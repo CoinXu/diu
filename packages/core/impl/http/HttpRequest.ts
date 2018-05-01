@@ -101,8 +101,7 @@ export class HttpRequest implements IHttpRequest {
 
   getCookieNames(): string[] {
     // TOOD
-    const names: string[] = <string[]>this.request.headers["set-cookie"]
-    return names
+    return <string[]>this.request.headers["set-cookie"]
   }
 
   getSession(): void {

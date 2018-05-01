@@ -5,11 +5,10 @@
  */
 
 import { Filter } from "./Filter"
-import { Context } from "./Context"
 
 export interface FilterManager {
-  new(context: Context, filters?: Filter[]): FilterManager
   add(filter: Filter): FilterManager
   next(): Promise<FilterManager>
-  hasNext() :boolean
+  apply(): Promise<FilterManager>
+  hasNext(): boolean
 }

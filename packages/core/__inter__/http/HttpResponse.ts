@@ -8,7 +8,7 @@ import { Cookie } from "./Cookie"
 import { Header } from "./Header"
 
 export interface HttpResponse {
-  getBufferSize(): string
+  getBufferSize(): number
   getCharacterEncoding(): string
   getContentType(): string
   getOutputStream(): NodeJS.WritableStream
@@ -21,12 +21,12 @@ export interface HttpResponse {
   setContentLength(length: number): HttpResponse
 
   // header
-  getHeader(name: string): Header
+  getHeader(name: string): Header | null
   getHeaders(): Header[]
   getHeaderNames(): string[]
   containsHeader(name: string): boolean
-  addHeader(name: string, value: Header): HttpResponse
-  setHeader(name: string, value: Header): HttpResponse
+  addHeader(header: Header): HttpResponse
+  setHeader(header: Header): HttpResponse
   addCookie(cookie: Cookie): HttpResponse
   redirect(location: string): HttpResponse
   getStatus(): number
