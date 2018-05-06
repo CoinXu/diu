@@ -31,7 +31,7 @@ export class Application implements IApplication {
   private async load(): Promise<Application> {
     // load filters
     for (const config of this.config.application.filter) {
-      const ins = ClassLoader.loadSingleton<Filter>(config.path, config.name)
+      const ins: SingletonClassInstance<Filter> = ClassLoader.loadSingleton<Filter>(config.path, config.name)
       const filter: Filter = ins.getInstance()
       const success: boolean = await filter.init(new FilterConfig(config))
       if (!success) {
@@ -43,8 +43,14 @@ export class Application implements IApplication {
     return this
   }
 
-  public start(callback: (...args: any[]) => void): Application {
-    this.load().then(callback)
+  private async _start(): Promise<Application> {
+    await this.load()
+    this.listen(this.config.server.port, this.config.server.host)
+    return this
+  }
+
+  public start(callback?: () => void): Application {
+    this._start().then(callback).catch(callback)
     return this
   }
 
@@ -54,7 +60,7 @@ export class Application implements IApplication {
   }
 
   public listen(port: number, host: string): Application {
-    this.server.listen(port, host, (req: IncomingMessage, res: ServerResponse): void => {
+    this.server.on("request", (req: IncomingMessage, res: ServerResponse): void => {
       const context: Context = createContext(req, res)
       const manager: FilterManager = new FilterManager(context, this.filters)
       manager.next().catch(error => {
@@ -62,6 +68,7 @@ export class Application implements IApplication {
         context.response.getOutputStream().write(error.message)
       })
     })
+    this.server.listen(port, host)
     return this
   }
 }

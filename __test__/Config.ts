@@ -16,7 +16,7 @@ export const Config: DiuConfig = {
   application: {
     filter: [
       {
-        path: join(__dirname, "/Filter"),
+        path: join(__dirname, "/DemoFilter"),
         name: "default",
         parameter: {}
       }

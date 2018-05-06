@@ -7,7 +7,6 @@
 import { ClassInstance } from "../../__inter__/verbose/ClassInstance"
 import { SingletonClassInstance } from "../../__inter__/verbose/SingletonClassInstance"
 
-
 export class ClassLoader {
   /**
    * 加载类
@@ -16,9 +15,8 @@ export class ClassLoader {
    * @return {ClassInstance<T>}
    */
   static load<T>(path: string, name = "default"): ClassInstance<T> {
-    let ins: ClassInstance<T>
-    let module: any = require(path)
-    ins = module[name]
+    const module: any = require(path)
+    const ins: ClassInstance<T> = module[name]
 
     if (typeof ins.newInstance !== "function") {
       throw new TypeError(`${name}.newInstance is not a function`)
@@ -33,10 +31,9 @@ export class ClassLoader {
    * @param {string} name
    * @return {SingletonClassInstance<T>}
    */
-  static loadSingleton<T>(path: string, name?: string): SingletonClassInstance<T> {
-    let ins: SingletonClassInstance<T>
-    let module: any = require(path)
-    ins = module[name]
+  static loadSingleton<T>(path: string, name = "default"): SingletonClassInstance<T> {
+    const module: any = require(path)
+    const ins: SingletonClassInstance<T> = module[name]
 
     if (typeof ins.getInstance !== "function") {
       throw new TypeError(`${name}.getInstance is not a function`)

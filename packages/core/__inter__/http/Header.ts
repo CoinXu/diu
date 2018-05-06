@@ -5,5 +5,6 @@
  */
 
 export interface Header {
-
+  getName(): string
+  getValue(): string
 }

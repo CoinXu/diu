@@ -7,6 +7,11 @@
   "name": "diu",
   "description": "node server framework",
   "version": "0.0.0",
+  "scripts": {
+    "build": "rm -rf ./dist && rm -rf ./@types && ./node_modules/.bin/tsc",
+    "debug": "node --inspect-brk=0.0.0.0:9228 ./dist/__test__/application.js",
+    "test": "node ./dist/__test__/application.js"
+  },
   "devDependencies": {
     "@types/node": "9.6.6",
     "typescript": "2.8"

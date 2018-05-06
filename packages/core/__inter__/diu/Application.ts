@@ -8,5 +8,6 @@ import { Filter } from "./Filter"
 
 export interface Application {
   add(filter: Filter): Application
+  start(callback: () => void): Application
   listen(port: number, host?: string): Application
 }

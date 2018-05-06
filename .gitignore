@@ -1,5 +1,7 @@
 .idea
 .vscode
 
+@types
+@dist
 node_modules
 tmp

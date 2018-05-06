@@ -6,8 +6,8 @@
 
 import { HttpResponse as IHttpResponse } from "../../__inter__/http/HttpResponse"
 import { ServerResponse } from "http"
-import { Header } from "./Header"
-import { Cookie } from "./Cookie"
+import { Header } from './Header'
+import { Cookie } from './Cookie'
 
 export class HttpResponse implements IHttpResponse {
   private response: ServerResponse
@@ -38,6 +38,10 @@ export class HttpResponse implements IHttpResponse {
 
   public getCharacterEncoding(): string {
     return this.charset
+  }
+
+  public getContentType(): string {
+    return this.contentType
   }
 
   public getOutputStream(): NodeJS.WritableStream {
@@ -88,7 +92,7 @@ export class HttpResponse implements IHttpResponse {
     })
   }
 
-  public containsHeader(name: string): string[] {
+  public containsHeader(name: string): boolean {
     return this.getHeader(name) !== null
   }
 
@@ -97,16 +101,16 @@ export class HttpResponse implements IHttpResponse {
     return this
   }
 
-  public setHeader(name: string, value: Header): HttpResponse {
-    if (this.containsHeader(name)) {
+  public setHeader(header: Header): HttpResponse {
+    if (this.containsHeader(header.getValue())) {
       return this
     }
-    this.addHeader(value)
+    this.addHeader(header)
     return this
   }
 
-  public addCookie(cooke: Cookie): HttpResponse {
-    this.addHeader(new Header("set-cookie", cooke.toString()))
+  public addCookie(cookie: Cookie): HttpResponse {
+    this.addHeader(new Header("set-cookie", cookie.toString()))
     return this
   }
 

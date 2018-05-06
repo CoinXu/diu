@@ -1,7 +1,7 @@
 /**
  * @author coinxu<duanxian0605@gmail.com>
  * @date 2018/05/01
- * @description Filter
+ * @description DemoFilter
  */
 
 import { Filter as IFilter } from "../packages/core/__inter__/diu/Filter"
@@ -9,13 +9,15 @@ import { FilterConfig } from "../packages/core/__inter__/diu/FilterConfig"
 import { HttpRequest } from "../packages/core/__inter__/http/HttpRequest"
 import { HttpResponse } from "../packages/core/__inter__/http/HttpResponse"
 import { singletonClassInstanceFactory } from "../packages/core/impl/verbose/SingletonClassInstanceFactory"
+import { SingletonClassInstance } from "../packages/core/__inter__/verbose/SingletonClassInstance"
 
-export class Filter implements IFilter {
+export class DemoFilter implements IFilter {
+
   public async init(config: FilterConfig): Promise<boolean> {
     return true
   }
 
-  public async action(req: HttpRequest, resp: HttpResponse): Promise<Filter> {
+  public async action(req: HttpRequest, resp: HttpResponse): Promise<DemoFilter> {
     resp.getServerResponse().end("ok")
     return this
   }
@@ -25,4 +27,4 @@ export class Filter implements IFilter {
   }
 }
 
-export default singletonClassInstanceFactory(Filter)
+export default <SingletonClassInstance<IFilter>>singletonClassInstanceFactory(DemoFilter)

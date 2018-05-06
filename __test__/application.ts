@@ -8,3 +8,5 @@ import { Application } from "../packages/core/impl/diu/Application"
 import { Config } from "./Config"
 
 const app: Application = new Application(Config)
+app.start()
+
