@@ -4,10 +4,10 @@
  * @description Application
  */
 
-import { Filter } from "./Filter"
+import { Filter } from "./filter/Filter"
+import { DiuConfig } from "./DiuConfig";
 
 export interface Application {
-  add(filter: Filter): Application
   start(callback: () => void): Application
   listen(port: number, host?: string): Application
 }

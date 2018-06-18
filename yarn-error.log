@@ -1,0 +1,51 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  8.11.2
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: connect ECONNREFUSED 172.27.192.4:4873
+      at Object._errnoException (util.js:992:11)
+      at _exceptionWithHostPort (util.js:1014:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+
+npm manifest: 
+  {
+    "author": {
+      "name": "coinxu",
+      "email": "duanxian0605@gmail.com",
+      "url": "https://github.com/CoinXu"
+    },
+    "name": "diu",
+    "description": "node server framework",
+    "version": "0.0.0",
+    "scripts": {
+      "build": "rm -rf ./dist && rm -rf ./@types && ./node_modules/.bin/tsc",
+      "debug": "node --inspect-brk=0.0.0.0:3005 ./dist/__test__/application.js",
+      "test": "node ./dist/__test__/application.js"
+    },
+    "devDependencies": {
+      "@types/node": "9.6.6",
+      "typescript": "2.8"
+    },
+    "repository": {
+      "url": "https://github.com/CoinXu/diu"
+    },
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

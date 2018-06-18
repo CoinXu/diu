@@ -4,13 +4,13 @@
  * @description Config
  */
 
-import { DiuConfig } from "../packages/core/__inter__/DiuConfig"
-import { join } from "path"
+import { join } from "path";
+import { DiuConfig } from "../packages/core/__inter__/diu/DiuConfig";
 
 export const Config: DiuConfig = {
   env: "development",
   server: {
-    port: 8080,
+    port: 3001,
     host: "0.0.0.0"
   },
   application: {
@@ -22,5 +22,5 @@ export const Config: DiuConfig = {
       }
     ]
   }
-}
+};
 

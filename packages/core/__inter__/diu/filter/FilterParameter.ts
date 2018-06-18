@@ -4,7 +4,7 @@
  * @description
  */
 
-export interface FilterConfig {
+export interface FilterParameter {
   getInitParameter(name: string): any
   getInitParameterNames(): string[]
 }

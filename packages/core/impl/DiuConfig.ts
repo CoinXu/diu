@@ -4,7 +4,7 @@
  * @description default config
  */
 
-import { DiuConfig } from "../__inter__/DiuConfig"
+import { DiuConfig } from "../__inter__/diu/DiuConfig";
 
 const DefaultDiuConfig: DiuConfig = {
   env: "development",

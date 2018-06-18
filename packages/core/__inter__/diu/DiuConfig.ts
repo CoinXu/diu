@@ -4,13 +4,7 @@
  * @description
  */
 
-export interface DiuFilterConfig {
-  // absolute path
-  path: string
-  // default value: default
-  name?: string
-  parameter: { [key: string]: any }
-}
+import { FilterConfig } from "./filter/FilterConfig";
 
 export interface DiuConfig {
   env: "production" | "development"
@@ -19,6 +13,6 @@ export interface DiuConfig {
     host: string
   },
   application: {
-    filter: DiuFilterConfig[]
+    filter: FilterConfig[]
   }
 }
