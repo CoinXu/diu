@@ -13,7 +13,8 @@ const DefaultDiuConfig: DiuConfig = {
     host: "0.0.0.0"
   },
   application: {
-    filter: []
+    filter: [],
+    services: []
   }
 }
 

@@ -16,7 +16,7 @@ class DemoFilter {
         return true;
     }
     async action(context, manager) {
-        context.response.getServerResponse().end("ok");
+        context.response.getServerResponse().write("Demo Filter");
         await manager.next();
         return this;
     }

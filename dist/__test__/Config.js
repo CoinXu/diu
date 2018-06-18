@@ -19,6 +19,13 @@ exports.Config = {
                 name: "default",
                 parameter: {}
             }
+        ],
+        services: [
+            {
+                path: path_1.join(__dirname, "./DemoService"),
+                name: "default",
+                route: "/example/service"
+            }
         ]
     }
 };

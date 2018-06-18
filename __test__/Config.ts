@@ -20,6 +20,13 @@ export const Config: DiuConfig = {
         name: "default",
         parameter: {}
       }
+    ],
+    services: [
+      {
+        path: join(__dirname, "./DemoService"),
+        name: "default",
+        route: "/example/service"
+      }
     ]
   }
 };

@@ -12,7 +12,8 @@ const DefaultDiuConfig = {
         host: "0.0.0.0"
     },
     application: {
-        filter: []
+        filter: [],
+        services: []
     }
 };
 exports.default = DefaultDiuConfig;

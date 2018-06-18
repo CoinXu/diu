@@ -26,7 +26,7 @@ export class DemoFilter implements IFilter {
   }
 
   public async action(context: Context, manager: ChannelManager<IFilter>): Promise<DemoFilter> {
-    context.response.getServerResponse().end("ok");
+    context.response.getServerResponse().write("Demo Filter");
     await manager.next();
     return this;
   }

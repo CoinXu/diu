@@ -6,7 +6,6 @@
 
 import { FilterConfig } from "../../../__inter__/diu/filter/FilterConfig";
 import { Filter } from "../../../__inter__/diu/filter/Filter";
-import { SingletonClassInstance } from "../../../__inter__/verbose/SingletonClassInstance";
 import { ClassLoader } from "../../verbose/ClassLoader";
 import { FilterParameter } from "./FilterParameter";
 

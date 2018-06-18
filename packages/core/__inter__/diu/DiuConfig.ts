@@ -5,6 +5,7 @@
  */
 
 import { FilterConfig } from "./filter/FilterConfig";
+import { ServiceConfig } from "./service/ServiceConfig";
 
 export interface DiuConfig {
   env: "production" | "development"
@@ -13,6 +14,7 @@ export interface DiuConfig {
     host: string
   },
   application: {
-    filter: FilterConfig[]
+    filter: FilterConfig[],
+    services: ServiceConfig[]
   }
 }
